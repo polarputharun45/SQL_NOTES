@@ -1,0 +1,62 @@
+SELECT first_name FROM Customers
+
+-- only select for whole row  
+
+               --LIKE COMMAND--
+SELECT first_name FROM Customers
+WHERE first_name LIKE 'J%'   -- only first_name starts with J
+WHERE first_name LIKE '%j'   -- only first_name ends with J
+WHERE first_name LIKE '%J%'  -- name contains atleas one J
+WHERE first_name LIKE '_J'   --second letter is J
+WHERE first_name LIKE '____' --4 letters word
+WHERE first_name LIKE 'S%A'  --word starts with A and end with A
+WHERE first_name NOT LIKE '%J%' -- the words does not contain J
+
+
+               --ORDER BY --
+
+SELECT name FROM Customers
+ORDER BY name ASC;     -- to display the names with an asseccending order
+ORDER BY name DESC;   -- to display the names with an descending order
+
+
+
+
+            --DISTINCT--
+
+
+SELECT DISTINCT first_name
+from Customers;   -- Removes duplicate names from customers
+SELECT COUNT(DISTINCT city)
+FROM Customers;   -- after removes it will give the remain customers
+
+
+
+              -- AGGREGATE FUNCTIONs-
+
+SELECT COUNT(*) FROM Customers -- it tell how many coustomers are present in the list 
+SELECT SUM(bill) FROM Customers -- it calculates all customers bill 
+-- for both we can add features like where the city of chennai candidates
+--- it will applicable for both like 
+--  in customers how many members from chennai 
+--  in customers how much bill was payed from chennai 
+SELECT AVG(bill) FROM Customers -- it tells average bill of all customers
+SELETC MAX(bill) FROM Customers  -- it tells who made maximum bill among the customers
+SELECT MIN(bill) FROM Customers -- it tells who made  minimum bill among the customers
+
+--for these also we can add features  where the city is chennai
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
