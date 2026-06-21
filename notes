@@ -46,11 +46,41 @@ SELECT MIN(bill) FROM Customers -- it tells who made  minimum bill among the cus
 
 --for these also we can add features  where the city is chennai
 
+                  -- INNER JOIN
+SELECT Customers.name , Orders.item
+FROM Customers;
+INNER JOIN Orders
+ON Custmores.Customer_id = Orders.Customer_id;
+-- it joins only if match records of FROM  table with INNER JOIN TABLE then it show output but if not found it will not show 
+-- like if the from table having customer_id 1 but in orders there is no customer_id in the sense it will not show both the details 
+
+                  -- LEFT JOIN
+SELECT Customers.name , Orders.item
+FROM Customers
+LEFT JOIN Orders
+ON Customers.Customer_id = Orders.Customer_id;
+-- It joins  when the records existing in the customers 
+-- if the records does not exists in the orders then it will return null in the customer_id
 
 
+                  -- RIGHT JOIN
 
+SELECT Customers.name , ORDERS.item
+FROM Customers
+LEFT JOIN Orders
+ON Customers.Customer_id = Orders.Customer_id;
+-- it joins when the records existing in the Orders;
+-- if the records does not exist in the orders then it will returnnull in the customer_id
+    
 
-
+                 -- FULL OUTER JOIN
+SELECT Customers.name, Orders.item
+FROM Customers
+FULL OUTER JOIN Orders
+ON Customers.customer_id = Orders.Customer_id;
+-- it join when the record exist in the customers table and does not exist in the orders table and return if the orders table does not conatians record as NULL
+-- it join when the record exist in the orders table and does not exist in the customers table and return if the customer table does not contains record as NULL
+-- it join when the record exist both the tables 
 
 
 
