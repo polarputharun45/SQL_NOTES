@@ -83,6 +83,22 @@ ON Customers.customer_id = Orders.Customer_id;
 -- it join when the record exist both the tables 
 
 
+                 --CELL
+
+CELL -- it gives up value 
+     -- like if the answer is 11.23 then it will give upper value  12
+
+                -- FLOOR
+
+FLOOR --it gives down vlaue
+      -- like if the answer is 11.23 then it will give lower value 11
+
+                 --ROUND
+
+ROUND -- it gives nearest value
+      -- like if the answer is 11.23 then it gives 11 and also if the answer 11.57 then it gives 12
+      
+
 
 
 
